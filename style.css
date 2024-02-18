@@ -2,8 +2,133 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f3f5fc;
 }
 
 .container {
+  height: 100%;
+  width: 100%;
+  padding: 40px 40px 0 40px;
+  background-color: #f3f5fc;
   display: flex;
+  justify-content: space-around;
+}
+
+.logo-container {
+  width: 120px;
+  text-align: center;
+}
+.text-container {
+  padding: 120px 0 30px 80px;
+  width: 65%;
+  text-align: center;
+}
+
+.text-container > label > textarea {
+  background-color: #f3f5fc;
+  border: none;
+}
+
+.alert-message {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  font-size: 0.75rem;
+  padding-bottom: 15px;
+  color: #495057;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.crip-button {
+  width: 328px;
+  padding: 24px;
+  border: none;
+  border-radius: 24px;
+  color: #ffffff;
+  background-color: #0a3871;
+}
+
+.descrip-button {
+  width: 328px;
+  padding: 24px;
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  color: #0a3871;
+  background-color: #d8dfe8;
+}
+
+.result-container {
+  width: 400px;
+}
+
+.result {
+  background-color: #ffffff;
+  height: 100%;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.svg-result {
+  padding: 0 20px;
+}
+
+.no-text-result {
+  padding: 0 36px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.no-text-result > span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.no-text-result > p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #495057;
+}
+
+textarea {
+  resize: none;
+  caret-color: #0a3871;
+  caret-shape: auto;
+  font-size: 2rem;
+  color: #0a3871;
+}
+
+/* mudando a cor do placeholde do input textarea */
+::-webkit-input-placeholder {
+  color: #0a3871;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* retirando os efeitos do text area */
+textarea:focus,
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+textarea::placeholder:focus {
+  content: "";
 }
