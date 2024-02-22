@@ -5,12 +5,21 @@ const resultSvgImage = document.querySelector(".svg-result");
 cripButton.addEventListener("click", inputCriptografar);
 descripButton.addEventListener("click", inputDescriptografar);
 
+//função para verificar se as foi escrito em minúsculo
+function verificarMaiusculasAcentuacao(str) {
+  return /[A-ZáàâãéèêíïóôõöúñÁÀÂÃÉÈÍÏÓÔÕÖÚÑ]/.test(str);
+}
+
 //capturar o input do usuário para criptografar
 function inputCriptografar() {
   const input = document.querySelector("#text-message");
   const textoCriptografado = criptografar(input);
-  if (textoCriptografado != "") {
+  if (
+    textoCriptografado != "" &&
+    !verificarMaiusculasAcentuacao(textoCriptografado)
+  ) {
     resultContainer.appendChild(createResultDiv(textoCriptografado));
+    resultContainer.append(createCopyButton());
   }
 
   // console.log(textoCriptografado);
@@ -20,8 +29,12 @@ function inputCriptografar() {
 function inputDescriptografar() {
   const input = document.querySelector("#text-message");
   const textoCriptografado = descriptografar(input);
-  if (textoCriptografado != "") {
+  if (
+    textoCriptografado != "" &&
+    !verificarMaiusculasAcentuacao(textoCriptografado)
+  ) {
     resultContainer.appendChild(createResultDiv(textoCriptografado));
+    resultContainer.append(createCopyButton());
   }
 
   // console.log(textoCriptografado);
@@ -100,7 +113,6 @@ function createResultDiv(textoCriptografado) {
   while (resultContainer.firstChild) {
     resultContainer.removeChild(resultContainer.firstChild);
   }
-  showTextoCriptografado.appendChild(createCopyButton());
   return showTextoCriptografado;
 }
 
@@ -109,5 +121,21 @@ function createCopyButton() {
   const copyButton = document.createElement("button");
   copyButton.innerText = "Copiar";
   copyButton.className = "copy-button";
+  copyButton.addEventListener("click", () => {
+    //criando constante para armazenar o texto criptografado ou descriptografado
+    const textoResultado = document.querySelector(
+      ".texto-criptografado"
+    ).innerText;
+    console.log(textoResultado);
+    //utilizando método assíncrono writeTexte() para copiar o texto para o clipboard
+    navigator.clipboard.writeText(textoResultado).then(
+      () => {
+        console.log("Content copied to clipboard");
+      },
+      () => {
+        console.error("faile to copy");
+      }
+    );
+  });
   return copyButton;
 }
