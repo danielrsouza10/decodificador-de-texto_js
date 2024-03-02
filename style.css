@@ -199,16 +199,16 @@ textarea::placeholder:focus {
   }
 
   .result {
-    width: 300px;
+    width: 350px;
   }
 
   .copy-button {
     width: 268px;
   }
 
-  /* .texto-criptografado {
+  .texto-criptografado {
     padding: 40px 20px;
-  } */
+  }
 
   .svg-result > svg {
     width: 100%;
@@ -224,7 +224,7 @@ textarea::placeholder:focus {
   }
 
   .result {
-    width: 250px;
+    width: 300px;
   }
 
   .copy-button {
@@ -288,8 +288,8 @@ textarea::placeholder:focus {
   }
 }
 
-/* @media (max-height: 900px) and (max-width: 450px) {
+@media (max-height: 900px) and (max-width: 450px) {
   .texto-criptografado {
     padding: 10px 20px;
   }
-} */
+}

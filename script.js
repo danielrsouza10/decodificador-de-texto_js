@@ -20,6 +20,11 @@ function inputCriptografar() {
   ) {
     resultContainer.appendChild(createResultDiv(textoCriptografado));
     resultContainer.append(createCopyButton());
+    document.querySelector(".text-alert").style.color = "#495057";
+    document.querySelector(".text-alert").style.fontWeight = "normal";
+  } else {
+    document.querySelector(".text-alert").style.color = "red";
+    document.querySelector(".text-alert").style.fontWeight = "bold";
   }
 
   // console.log(textoCriptografado);
@@ -35,6 +40,11 @@ function inputDescriptografar() {
   ) {
     resultContainer.appendChild(createResultDiv(textoCriptografado));
     resultContainer.append(createCopyButton());
+    document.querySelector(".text-alert").style.color = "#495057";
+    document.querySelector(".text-alert").style.fontWeight = "normal";
+  } else {
+    document.querySelector(".text-alert").style.color = "red";
+    document.querySelector(".text-alert").style.fontWeight = "bold";
   }
 
   // console.log(textoCriptografado);
@@ -59,7 +69,7 @@ function criptografar(input) {
     }
   }
   result = inputUsuario.join("");
-  console.log(result);
+  // console.log(result);
   return result;
 }
 
