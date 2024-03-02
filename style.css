@@ -216,8 +216,6 @@ textarea::placeholder:focus {
 }
 
 @media (max-width: 1000px) {
-  .container {
-  }
   .text-container {
     padding: 120px 0 30px 20px;
     width: 450px;
@@ -235,9 +233,7 @@ textarea::placeholder:focus {
 @media (max-width: 800px) {
   .container {
     flex-direction: column;
-
     padding: 30px 30px 0 30px;
-
     gap: 24px;
   }
 
