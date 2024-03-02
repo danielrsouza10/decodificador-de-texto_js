@@ -59,7 +59,7 @@ function criptografar(input) {
     }
   }
   result = inputUsuario.join("");
-  // console.log(result);
+  console.log(result);
   return result;
 }
 
