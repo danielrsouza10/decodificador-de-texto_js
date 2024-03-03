@@ -63,7 +63,7 @@ function criptografar(input) {
     } else if (inputUsuario[i] == "i") {
       inputUsuario.splice(i, 1, "imes");
     } else if (inputUsuario[i] == "o") {
-      inputUsuario.splice(i, 1, "omer");
+      inputUsuario.splice(i, 1, "ober");
     } else if (inputUsuario[i] == "u") {
       inputUsuario.splice(i, 1, "ufat");
     }
@@ -97,7 +97,7 @@ function descriptografar(input) {
       inputUsuario.splice(i, 4, "i");
     } else if (
       inputUsuario[i] == "o" &&
-      inputUsuario[i + 1] == "m" &&
+      inputUsuario[i + 1] == "b" &&
       inputUsuario[i + 2] == "e" &&
       inputUsuario[i + 3] == "r"
     ) {
