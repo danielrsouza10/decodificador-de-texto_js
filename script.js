@@ -140,6 +140,7 @@ function createCopyButton() {
     //utilizando método assíncrono writeTexte() para copiar o texto para o clipboard
     navigator.clipboard.writeText(textoResultado).then(
       () => {
+        alert("Texto copiado com sucesso!");
         console.log("Content copied to clipboard");
       },
       () => {
